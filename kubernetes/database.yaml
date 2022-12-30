@@ -8,11 +8,13 @@ data:
 kind: ConfigMap
 metadata:
   name: pg-init-script
+  namespace: sourishns
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres
+  namespace: sourishns
   labels:
     app: database
 spec:
