@@ -29,10 +29,9 @@ metadata:
   name: react-service
   namespace: sourish
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: frontend
   ports:
   - port: 3000
     targetPort: 3000
-    nodePort: 30000
