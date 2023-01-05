@@ -54,7 +54,7 @@ metadata:
   labels:
     app: database
 spec:
-  type: ClusterIP
+  type: ClusterIP:none
   selector:
     app: database
   ports:
