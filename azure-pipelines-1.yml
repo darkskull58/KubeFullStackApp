@@ -13,7 +13,7 @@ variables:
   dockerRegistryServiceConnection: '4c7db5cf-41c1-4589-8cd8-bad6b80bb8ca'
   imageRepository: 'darkskullkubefullstackappfront'
   containerRegistry: 'democldacr.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/backend/Dockerfile'
+  dockerfilePath: '$(Build.SourcesDirectory)/frontend/Dockerfile'
   tag: '$(Build.BuildId)'
 
   # Agent VM image name
