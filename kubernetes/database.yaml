@@ -37,12 +37,14 @@ spec:
         - name: sqlscript
           mountPath: /docker-entrypoint-initdb.d
         - name: pvc
-          mountPath: /var/lib/postgresql/data/custom
+          mountPath: /var/lib/postgresql/data
         env:
           - name: POSTGRES_USER
             value: "postgres"
           - name: POSTGRES_PASSWORD
             value: "postgres"
+          - name: PGDATA
+            value: "/var/lib/postgresql/data/pgdata"
       volumes:
         - name: sqlscript
           configMap:
