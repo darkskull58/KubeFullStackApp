@@ -12,7 +12,7 @@ spec:
       app: frontend
   template:
     metadata:
-    namespace: sourish
+      namespace: sourish
       labels:
         app: frontend
     spec:
