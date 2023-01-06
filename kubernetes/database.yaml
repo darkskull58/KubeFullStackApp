@@ -36,6 +36,8 @@ spec:
         volumeMounts:
         - name: sqlscript
           mountPath: /docker-entrypoint-initdb.d
+        - name: pvc
+          mountPath: /var/lib/postgresql/data
         env:
           - name: POSTGRES_USER
             value: "postgres"
@@ -45,6 +47,9 @@ spec:
         - name: sqlscript
           configMap:
             name: pg-init-script
+        - name: pvc
+          persistentVolumeClaim:
+            claimName: "pvc-claim"
 ---
 apiVersion: v1
 kind: Service
