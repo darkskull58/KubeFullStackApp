@@ -19,7 +19,7 @@ spec:
       containers:
       - name: flask-backend
         image: democldacr.azurecr.io/darkskullkubefullstackapp:6
-        imagePullPolicy: Never
+        imagePullPolicy:
         ports:
         - containerPort: 5000
         env:
